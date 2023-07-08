@@ -14,7 +14,11 @@ function App() {
     <div className="w-full">
       <div className="flex flex-col justify-center items-center">
         <LoginForm />
-
+        <div className="flex items-center">
+          <hr className="flex-grow" />
+          <span className="px-4 text-gray-500">or</span>
+          <hr className="flex-grow border-gray-300" />
+        </div>
       </div>
       <Navbar />
     </div>

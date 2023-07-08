@@ -2,42 +2,35 @@ import apple from "../assets/apple.svg";
 import fb from "../assets/facebook.svg";
 import google from "../assets/google.svg";
 
-const Btn = ({text ="No value"}) => {
+const Btn = ({ children }) => {
   return (
-    <button className="w-[327px] h-12 justify-center items-center inline-flex">
-      <div className="w-[327px] px-6 py-3.5 bg-yellow-400 rounded-2xl flex-col justify-start items-center inline-flex">
-        <div className="justify-start items-center gap-2 inline-flex">
-          <div className="text-center text-neutral-700 text-[16px] font-bold leading-tight">
-            {text}
-          </div>
-        </div>
-      </div>
+    <button className="w-[327px] h-12 justify-center items-center inline-flex bg-yellow-400 rounded-2xl px-6 py-3.5 text-neutral-700 text-[16px] font-bold leading-tight font-lato">
+      {children}
     </button>
   );
 };
 
-const SocialButton = ({ text, image }) => {
+const SocialButton = ({ children, icon }) => {
   return (
-    <div className="w-[327px] h-10 relative">
-      <div className="h-10 px-6 py-2.5 left-0 top-0 absolute rounded-[100px] border border-neutral-700 flex-col justify-start items-center inline-flex">
-        <div className="justify-start items-center gap-2 inline-flex">
-          <img src={google} />
-          <div className="text-center text-neutral-700 text-[16px] font-semibold leading-tight">
-            Continue with Facebook
-          </div>
-        </div>
-      </div>
-    </div>
+    <button className="w-[327px] h-10 px-6 py-2.5 rounded-[100px] border border-neutral-700">
+      <img src={icon} />
+      {children}
+    </button>
   );
 };
 
-const buttonTypes = new Map([
-    ["basic", <Btn />],
-    ["social", <SocialButton text="Continue with Facebook" image={fb} />],
+const getButtonType = (type, props) => {
+  const buttonTypes = new Map([
+    ["basic", <Btn {...props} />],
+    ["social", <SocialButton {...props} />],
   ]);
-function Button({type = 'basic', text}) {
-    const buttonComponent = buttonTypes.get(type);
-    return buttonComponent || null; 
+  if (!type) return buttonTypes.get("basic");
+  return React.cloneElement(buttonTypes, props);
+};
+
+function Button(props) {
+  const buttonComponent = getButtonType(props.type, props);
+  return buttonComponent || null;
 }
 
 export default Button;

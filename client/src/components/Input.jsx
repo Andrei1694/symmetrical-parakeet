@@ -1,15 +1,16 @@
-function Input({label = "no label error"}) {
+function Input({ type, label = "no label error" }) {
   return (
-    <div className="w-[327px] h-[72px] relative">
-      <div className="w-[327px] h-4 left-0 top-0 absolute">
-        <div className="left-0 top-0 absolute justify-start items-center gap-1 inline-flex">
-          <label className="text-neutral-700 text-[12px] font-extrabold leading-none">
-            {label}
-          </label>
-        </div>
+    <div className="w-[327px] h-[72px]">
+      <div className="justify-start items-center  inline-flex">
+        <label className="gap-1 h-4 text-neutral-700 text-[12px] font-extrabold leading-none">
+          {label}
+        </label>
       </div>
-      <div className="w-[327px] h-12 left-0 top-[24px] absolute">
-        <input className="w-[327px] h-12 left-0 top-0 absolute bg-white rounded-2xl border border-neutral-300" />
+      <div className="w-[327px] h-12">
+        <input
+          type={type}
+          className="pl-4 py-[14px] w-[327px] h-12 bg-white rounded-2xl border border-neutral-300 text-neutral-700 text-[16px] font-normal leading-normal"
+        />
       </div>
     </div>
   );
