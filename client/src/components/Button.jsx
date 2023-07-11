@@ -1,3 +1,4 @@
+import React from "react";
 import apple from "../assets/apple.svg";
 import fb from "../assets/facebook.svg";
 import google from "../assets/google.svg";
@@ -19,18 +20,26 @@ const SocialButton = ({ children, icon }) => {
   );
 };
 
-const getButtonType = (type, props) => {
+const DisabledButton = ({children}) => {
+  return(
+    <button disabled={true} className="w-full text-base leading-tight font-bold bg-gray-50 h-12 text-gray-100 font-lato rounded-2xl">{children}</button>
+  )
+}
+
+function getButtonType (styleType, props) {
+  console.log(styleType)
   const buttonTypes = new Map([
     ["basic", <Btn {...props} />],
     ["social", <SocialButton {...props} />],
+    ["disabled", <DisabledButton {...props} />]
   ]);
-  if (!type) return buttonTypes.get("basic");
+  if (!buttonTypes.has(styleType)) return buttonTypes.get("basic");
   return React.cloneElement(buttonTypes, props);
 };
 
 function Button(props) {
-  const buttonComponent = getButtonType(props.type, props);
-  return buttonComponent || null;
+  const buttonComponent = getButtonType(props.styleType, props);
+  return buttonComponent || <>error</>;
 }
 
 export default Button;

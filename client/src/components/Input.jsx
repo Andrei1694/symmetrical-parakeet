@@ -1,4 +1,4 @@
-function Input({ type, label = "no label error" }) {
+function Input({ type, label = "no label error", onChange,value }) {
   return (
     <div className="w-[327px] h-[72px]">
       <div className="justify-start items-center  inline-flex">
@@ -10,6 +10,8 @@ function Input({ type, label = "no label error" }) {
         <input
           type={type}
           className="pl-4 py-[14px] w-[327px] h-12 bg-white rounded-2xl border border-neutral-300 text-neutral-700 text-[16px] font-normal leading-normal"
+          onChange={onChange}
+          value={value}
         />
       </div>
     </div>

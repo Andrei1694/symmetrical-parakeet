@@ -20,7 +20,8 @@ export default {
           '400': '#FFE202'
         },
         gray: {
-          '50': "#F8F7FA"
+          '50': "#F8F7FA",
+          '100': '#A6A6AA'
         }
       }
     },
