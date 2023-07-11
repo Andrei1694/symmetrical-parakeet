@@ -1,16 +1,10 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import Button from "./components/Button";
-import Input from "./components/Input";
 import Navbar from "./components/Navbar";
 import LoginForm from "./forms/LoginForm";
 import Header from "./components/Header";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="w-full">
       <Header locationText="Log In" />
@@ -24,13 +18,17 @@ function App() {
           <div className="w-[148px] h-[0px] left-[179px] top-[12px] absolute border border-neutral-300"></div>
         </div>
         <div className="flex flex-col">
-        <Button className="mb-4">Continue with Facebook</Button>
-        <Button>Continue with Google</Button>
+          <Button className="mb-4">Continue with Facebook</Button>
+          <Button>Continue with Google</Button>
         </div>
-    
+
         <div className="font-lato">
-          <span className="text-neutral-700 text-base font-normal leading-normal">Already have an account?</span> 
-          <span className="font-extrabold font-base underline leading-tight">Log in</span>
+          <span className="text-neutral-700 text-base font-normal leading-normal">
+            Already have an account?
+          </span>
+          <span className="font-extrabold font-base underline leading-tight">
+            Log in
+          </span>
         </div>
       </div>
       <Navbar />
