@@ -1,22 +1,23 @@
 import Header from "../components/Header";
 import OrDivider from "../components/OrDivider";
 import SocialButton from "../components/SocialButton";
-import LoginForm from "../forms/LoginForm";
 import google from "../assets/google.svg";
 import fb from "../assets/facebook.svg";
 import logo from "../assets/logo.svg";
 import mail from "../assets/mail.svg";
 import { Link } from "react-router-dom";
-export default function LoginPage() {
+import SignupForm from "../forms/SignupForm";
+
+export default function SignupPage() {
   return (
     <>
-      <Header locationText="Log In" />
+      <Header locationText="Sign Up" />
       <div className="flex justify-center items-center mt-6 mb-6">
         <img src={logo} alt="Logo" />
       </div>
       <div className="flex flex-col justify-center items-center">
         <div className="flex flex-col">
-          <LoginForm />
+          <SignupForm />
         </div>
         <OrDivider className="mb-6 mt-6" />
         {/* button container */}
@@ -32,13 +33,13 @@ export default function LoginPage() {
           </SocialButton>
           <div className="font-lato mb-[96px]">
             <span className="text-neutral-700 text-base font-normal leading-normal">
-              {`New to Habitual?  `}
+              {`Already have an account?  `}
             </span>
             <Link
-              to="/signup"
+              to="/login"
               className="font-extrabold font-base underline leading-tight"
             >
-              Sign Up
+              Login
             </Link>
           </div>
         </div>

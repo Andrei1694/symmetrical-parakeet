@@ -1,7 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import xIcon from "../assets/x.svg";
 function Header({ locationText }) {
+  const navigate = useNavigate();
   return (
-    <div className="w-full h-[104px] border-b-[1px] border-gray-50">
+    <div
+      className="w-full h-[104px] border-b-[1px] border-gray-50"
+      onClick={() => navigate("/")}
+    >
       <div className="flex">
         <img
           src={xIcon}
