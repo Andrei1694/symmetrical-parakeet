@@ -4,9 +4,9 @@ import SocialButton from "../components/SocialButton";
 import google from "../assets/google.svg";
 import fb from "../assets/facebook.svg";
 import logo from "../assets/logo.svg";
-import mail from "../assets/mail.svg";
 import { Link } from "react-router-dom";
 import SignupForm from "../forms/SignupForm";
+import { useUserStore } from "../store/user";
 
 export default function SignupPage() {
   return (
@@ -22,9 +22,6 @@ export default function SignupPage() {
         <OrDivider className="mb-6 mt-6" />
         {/* button container */}
         <div className="flex flex-col mb-6">
-          <SocialButton styleType="social" className="mb-1" icon={mail}>
-            Continue with Mail
-          </SocialButton>
           <SocialButton styleType="social" className="mb-1" icon={fb}>
             Continue with Facebook
           </SocialButton>
@@ -32,14 +29,14 @@ export default function SignupPage() {
             Continue with Google
           </SocialButton>
           <div className="font-lato mb-[96px]">
-            <span className="text-neutral-700 text-base font-normal leading-normal">
-              {`Already have an account?  `}
+            <span className="text-neutral-700 text-base font-normal leading-6 mr-2">
+              {`Already have an account?`}
             </span>
             <Link
               to="/login"
-              className="font-extrabold font-base underline leading-tight"
+              className="font-extrabold font-base underline leading-5 text-gray-150"
             >
-              Login
+              Log in
             </Link>
           </div>
         </div>

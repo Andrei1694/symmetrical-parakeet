@@ -9,7 +9,7 @@ function Input({
   return (
     <div className={`w-[327px] h-[72px] ${className}`}>
       <div className="justify-start items-center  inline-flex">
-        <label className="gap-1 h-4 text-neutral-700 text-[12px] font-extrabold leading-none">
+        <label className="h-4 text-gray-150 text-[12px] font-extrabold leading-4 mb-2 font-lato">
           {label}
         </label>
       </div>

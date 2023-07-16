@@ -21,7 +21,8 @@ export default {
         },
         gray: {
           '50': "#F8F7FA",
-          '100': '#A6A6AA'
+          '100': '#A6A6AA',
+          '150': '#3A3A3A'
         }
       }
     },

@@ -3,6 +3,7 @@ import bag from "../assets/shopping-bag.svg";
 import tag from "../assets/tag.svg";
 import home from "../assets/home.svg";
 import search from "../assets/search.svg";
+import { Link } from "react-router-dom";
 
 const icons = new Map([
   ["home", home],
@@ -24,15 +25,19 @@ function Navbar() {
   const renderIcons = () => {
     return Array.from(icons.entries()).map(([name, src]) => {
       console.log(name, src);
-      return <IconContainer src={`${src}`} alt={name} key={name} />;
+      return (
+        <Link to="/home">
+          <IconContainer src={`${src}`} alt={name} key={name} />
+        </Link>
+      );
     });
   };
   return (
-    <div className="w-full h-20  bg-white fixed bottom-0 border-t-[1px] border-gray-50 flex items-center flex-shrink-0">
+    <footer className="w-full h-20  bg-white fixed bottom-0 border-t-[1px] border-gray-50 flex items-center flex-shrink-0">
       <div className="flex justify-around items-center h-10 w-full">
         {renderIcons()}
       </div>
-    </div>
+    </footer>
   );
 }
 

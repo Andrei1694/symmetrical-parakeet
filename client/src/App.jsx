@@ -1,14 +1,9 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import LoginPage from "./pages/LoginPage";
-import WelcomePage from "./pages/WelcomePage";
+import { router } from "./pages/routes";
 
 function App() {
-  return (
-    <>
-      <Outlet />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

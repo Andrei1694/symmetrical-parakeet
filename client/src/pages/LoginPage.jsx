@@ -21,9 +21,6 @@ export default function LoginPage() {
         <OrDivider className="mb-6 mt-6" />
         {/* button container */}
         <div className="flex flex-col mb-6">
-          <SocialButton styleType="social" className="mb-1" icon={mail}>
-            Continue with Mail
-          </SocialButton>
           <SocialButton styleType="social" className="mb-1" icon={fb}>
             Continue with Facebook
           </SocialButton>
@@ -31,12 +28,12 @@ export default function LoginPage() {
             Continue with Google
           </SocialButton>
           <div className="font-lato mb-[96px]">
-            <span className="text-neutral-700 text-base font-normal leading-normal">
-              {`New to Habitual?  `}
+            <span className="text-neutral-700 text-base font-normal leading-6 mr-2">
+              {`New to Habitual?`}
             </span>
             <Link
               to="/signup"
-              className="font-extrabold font-base underline leading-tight"
+              className="font-extrabold font-base underline leading-5"
             >
               Sign Up
             </Link>
