@@ -13,7 +13,7 @@ export default {
         lato: ['Lato', 'sans-serif']
       },
       width: {
-        'full': '375px'
+        // 'full': '375px'
       },
       colors: {
         yellow: {

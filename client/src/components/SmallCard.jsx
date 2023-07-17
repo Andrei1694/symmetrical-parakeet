@@ -6,7 +6,7 @@ import star from "../assets/star.svg";
 export default function SmallCard() {
   return (
     <div className="w-[156px] h-[233px] flex-col justify-end items-center inline-flex rounded-[10px] shadow">
-      <div className="image w-[156px] h-[136px] justify-center items-center inline-flex bg-gray-50">
+      <div className="image w-[156px] h-[136px] justify-center items-center inline-flex bg-gray-50 rounded-t-[10px]">
         <img className="w-14 shrink-0" src={demo} alt="Prod" />
         {/* <AddToFavorites /> */}
       </div>

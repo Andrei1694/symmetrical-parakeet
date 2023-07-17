@@ -39,6 +39,9 @@ export default function HomePage() {
             slidesPerView={1}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
+            style={{
+              height: "314px",
+            }}
           >
             <SwiperSlide>
               <ProductCard />
