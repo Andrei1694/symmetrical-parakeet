@@ -18,9 +18,9 @@ export default function Box({ variant, children }) {
           {children}
         </h5>
         <div className="flex flex-col items-end justify-end grow-1 h-full">
-          <div className="w-8 h-8 bg-white rounded-[50%] flex justify-center items-center cursor-pointer ml-auto">
+          <div className="bg-white rounded-[50%] flex justify-center items-center cursor-pointer ml-auto">
             <Link>
-              <img src={arrow} alt="" />
+              <img src={arrow} className="p-2" alt="" />
             </Link>
           </div>
         </div>
