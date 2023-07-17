@@ -5,7 +5,7 @@ import Button from "../components/Button";
 export default function WelcomePage() {
   const navigate = useNavigate();
   return (
-    <div className="w-full flex flex-col items-center justify-center h-[812px]">
+    <div className="flex flex-col items-center justify-center h-[812px]">
       <img src={logo} alt="Logo" />
       <Button className="mt-[128px]" onClick={() => navigate("/signup")}>
         Sign Up

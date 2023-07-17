@@ -4,7 +4,7 @@ function Header({ locationText }) {
   const navigate = useNavigate();
   return (
     <div
-      className="w-full h-[104px] border-b-[1px] border-gray-50"
+      className="h-[104px] border-b-[1px] border-gray-50"
       onClick={() => navigate("/")}
     >
       <div className="flex">

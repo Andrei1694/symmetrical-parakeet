@@ -9,7 +9,7 @@ import SmallCard from "../components/SmallCard";
 
 export default function HomePage() {
   return (
-    <div className="w-full flex flex-col items-center max-w-[375px] relative overflow-hidden">
+    <div className="flex flex-col items-center min-w-[375px] relative overflow-hidden">
       <div className="w-[752px] h-[752px] bg-yellow-400 rounded-full absolute top-[-25%] left-[-10%] z-0" />
       <div className="w-[325px] z-10">
         <div className="flex items-center mt-[77px]">
