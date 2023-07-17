@@ -34,7 +34,7 @@ export default function HomePage() {
         </h1>
         <div className="mt-6">
           <Swiper
-            width={300}
+            width={284}
             spaceBetween={16}
             slidesPerView={1}
             onSlideChange={() => console.log("slide change")}

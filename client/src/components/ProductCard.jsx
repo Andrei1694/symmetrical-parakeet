@@ -6,7 +6,7 @@ import star from "../assets/star.svg";
 export default function ProductCard() {
   return (
     <div className="w-[284px] h-[312px] flex-col justify-center items-center inline-flex shadow font-lato bg-gray-50 rounded-[10px]">
-      <div className="w-[285px] h-40 justify-center items-center inline-flex">
+      <div className="w-[284px] h-40 justify-center items-center inline-flex">
         <img className="shrink-0  py-4" src={demo} />
         <AddToFavorites />
       </div>
