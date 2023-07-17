@@ -33,7 +33,7 @@ function Navbar() {
     });
   };
   return (
-    <footer className="w-full h-20  bg-white fixed bottom-0 border-t-[1px] border-gray-50 flex items-center flex-shrink-0">
+    <footer className="w-full h-20  bg-white fixed bottom-0 border-t-[1px] border-gray-50 flex items-center flex-shrink-0 z-20">
       <div className="flex justify-around items-center h-10 w-full">
         {renderIcons()}
       </div>

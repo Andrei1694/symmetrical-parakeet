@@ -1,11 +1,11 @@
-import demo from "../assets/demo_electronic.png";
-import star from "../assets/star.svg";
-import heart from "../assets/heart.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import avatar from "../assets/avatar-fake.svg";
 // Import Swiper styles
 import "swiper/css";
 import { Link } from "react-router-dom";
+import Box from "../components/Box";
+import ProductCard from "../components/ProductCard";
+import demo from "../assets/demo_electronic.png";
 function SmallCard() {
   return (
     <div className="w-[156px] h-[233px] flex-col justify-end items-center inline-flex rounded-[10px] shadow">
@@ -13,87 +13,6 @@ function SmallCard() {
         <img className="" src={demo} alt="Prod" />
       </div>
       <div className="info p-4">dasd</div>
-    </div>
-  );
-}
-function Pill({ children, colorOption }) {
-  const color1 = ["text-green-500", "bg-emerald-50"];
-  const color2 = ["text-blue-400", "bg-blue-50"];
-  return (
-    <div className="flex-col justify-start items-center gap-2.5 inline-flex">
-      <div
-        className={`px-2 py-1 ${color1[1]} rounded-[100px] flex-col justify-start items-start gap-2.5 flex`}
-      >
-        <h5
-          className={`${color1[0]} text-xs font-extrabold uppercase leading-3`}
-        >
-          {children}
-        </h5>
-      </div>
-    </div>
-  );
-}
-function AddToFavorites() {
-  return (
-    <div className="p-2 left-[245px] top-[8px] absolute bg-white rounded-[100px] shadow justify-start items-start gap-2.5 inline-flex cursor-pointer">
-      <div className="w-4 h-4 relative">
-        <img src={heart} />
-      </div>
-    </div>
-  );
-}
-function ProductCard() {
-  return (
-    <div className="w-[284px] h-[312px] flex-col justify-center items-center inline-flex shadow font-lato bg-gray-50 rounded-[10px]">
-      <div className="w-[285px] h-40 justify-center items-center inline-flex">
-        <img className="shrink-0  py-4" src={demo} />
-        <AddToFavorites />
-      </div>
-      <div className="p-4 bg-white flex-col justify-start items-start gap-4 flex">
-        <div className="flex-col justify-start items-center gap-1 flex">
-          <div className="w-[253px] text-gray-100 text-xl font-normal leading-6">
-            Bose Headphones
-          </div>
-          <div className="justify-center items-start gap-[73px] inline-flex">
-            <div className="self-stretch justify-start items-center gap-2 inline-flex">
-              {/* Price */}
-              <div className="opacity-90 text-neutral-700 text-base font-extrabold leading-tight">
-                $265.99
-              </div>
-              {/* Discount */}
-              <div className="opacity-90 text-neutral-300 text-xs font-bold line-through leading-3">
-                $279.99
-              </div>
-            </div>
-            <Pill>10% OFF</Pill>
-          </div>
-          <div className="w-[253px] text-gray-150 text-xs font-normal leading-none">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint.
-          </div>
-        </div>
-        <div className="justify-center items-start gap-[61px] inline-flex">
-          <div className="self-stretch justify-start items-center gap-2 inline-flex">
-            <div className="justify-start items-center gap-1 flex">
-              <div className="w-2.5 h-2.5">
-                <img src={star} alt="Star" />
-              </div>
-              <div className="justify-start items-center gap-px flex">
-                <div className="text-neutral-700 text-xs font-bold leading-none">
-                  5.0
-                </div>
-                <div className="text-neutral-700 text-xs font-normal leading-none">
-                  (34)
-                </div>
-              </div>
-            </div>
-            <div className="text-right text-neutral-700 text-xs font-bold leading-none">
-              Category
-            </div>
-          </div>
-          <Pill>Staff Pick</Pill>
-        </div>
-      </div>
     </div>
   );
 }
@@ -150,33 +69,11 @@ export default function HomePage() {
           <SmallCard />
         </div>
         {/* Boxes */}
-        <div className="flex justify-start">
-          <div className="w-[156px] h-[156px] p-4 bg-red-400 rounded-[10px] shadow flex-col justify-center items-end gap-5 inline-flex">
-            <div className="w-[124px] text-white text-xl font-bold leading-normal">
-              Shopping habits and interests
-            </div>
-            <div className="w-8 h-8 pr-[15px] shadow justify-start items-center inline-flex">
-              <div className="w-[17px] h-12 pb-4 flex-col justify-start items-center inline-flex">
-                <div className="p-2 bg-white rounded-[15px] justify-start items-center gap-2 inline-flex">
-                  <div className="w-4 h-4 relative" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="w-[156px] h-[156px] justify-center items-center inline-flex">
-          <div className="w-[156px] h-[156px] p-4 bg-teal-400 rounded-[10px] shadow flex-col justify-center items-end gap-5 inline-flex">
-            <div className="w-[124px] text-white text-xl font-bold leading-normal">
-              Today’s trending items
-            </div>
-            <div className="w-8 h-8 pr-[15px] shadow justify-start items-center inline-flex">
-              <div className="w-[17px] h-12 pb-4 flex-col justify-start items-center inline-flex">
-                <div className="p-2 bg-white rounded-[15px] justify-start items-center gap-2 inline-flex">
-                  <div className="w-4 h-4 relative" />
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="flex flex-row flex-wrap w-[325px] mt-12 gap-[13px]">
+          <Box>Lorem ipsum dolor sit amet consectetur.</Box>
+          <Box variant="red">Lorem ipsum dolor sit amet.</Box>
+          <Box variant="blue">Lorem ipsum dolor sit amet.</Box>
+          <Box variant="yellow">Lorem ipsum dolor sit amet.</Box>
         </div>
       </div>
     </div>
