@@ -5,17 +5,7 @@ import "swiper/css";
 import { Link } from "react-router-dom";
 import Box from "../components/Box";
 import ProductCard from "../components/ProductCard";
-import demo from "../assets/demo_electronic.png";
-function SmallCard() {
-  return (
-    <div className="w-[156px] h-[233px] flex-col justify-end items-center inline-flex rounded-[10px] shadow">
-      <div className="image">
-        <img className="" src={demo} alt="Prod" />
-      </div>
-      <div className="info p-4">dasd</div>
-    </div>
-  );
-}
+import SmallCard from "../components/SmallCard";
 
 export default function HomePage() {
   return (
@@ -64,9 +54,37 @@ export default function HomePage() {
             </SwiperSlide>
           </Swiper>
         </div>
-        <div>
-          <h5 className="font-lato">HOT DEALS</h5>
-          <SmallCard />
+        <div className="mt-10">
+          <div className="flex justify-between">
+            <h5 className="font-lato font-extrabold text-xs uppercase text-gray-150">
+              HOT DEALS
+            </h5>
+            <h5 className="font-lato font-extrabold text-xs uppercase text-gray-100 underline leading-4">
+              SEE ALL
+            </h5>
+          </div>
+          <div className="mt-6">
+            <Swiper
+              width={156}
+              spaceBetween={16}
+              slidesPerView={1}
+              onSlideChange={() => console.log("slide change")}
+              onSwiper={(swiper) => console.log(swiper)}
+            >
+              <SwiperSlide>
+                <SmallCard />
+              </SwiperSlide>
+              <SwiperSlide>
+                <SmallCard />
+              </SwiperSlide>
+              <SwiperSlide>
+                <SmallCard />
+              </SwiperSlide>
+              <SwiperSlide>
+                <SmallCard />
+              </SwiperSlide>
+            </Swiper>
+          </div>
         </div>
         {/* Boxes */}
         <div className="flex flex-row flex-wrap w-[325px] mt-12 gap-[13px]">
