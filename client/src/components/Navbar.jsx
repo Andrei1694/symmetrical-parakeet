@@ -24,7 +24,6 @@ const IconContainer = ({ src, alt }) => {
 function Navbar() {
   const renderIcons = () => {
     return Array.from(icons.entries()).map(([name, src]) => {
-      console.log(name, src);
       return (
         <Link to="/home">
           <IconContainer src={`${src}`} alt={name} key={name} />

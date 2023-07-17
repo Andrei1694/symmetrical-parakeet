@@ -1,11 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import avatar from "../assets/avatar-fake.svg";
-// Import Swiper styles
+import { Tab } from "@headlessui/react";
 import "swiper/css";
 import { Link } from "react-router-dom";
 import Box from "../components/Box";
 import ProductCard from "../components/ProductCard";
 import SmallCard from "../components/SmallCard";
+import Tabs from "../components/Tabs";
 
 export default function HomePage() {
   return (
@@ -92,7 +93,10 @@ export default function HomePage() {
             </Swiper>
           </div>
         </div>
-        {/* Boxes */}
+        <div className="shadow rounded-[10px]">
+          <Tabs />
+        </div>
+
         <div className="flex flex-row flex-wrap w-[325px] mt-12 gap-[13px] mb-36">
           <Box>Lorem ipsum dolor sit amet consectetur.</Box>
           <Box variant="red">Lorem ipsum dolor sit amet.</Box>
