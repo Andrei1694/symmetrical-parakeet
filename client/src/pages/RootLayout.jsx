@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 
 export default function RootLayout() {
   return (
-    <div className="min-h-[2000px]">
+    <div>
       <main>
         <Outlet />
       </main>

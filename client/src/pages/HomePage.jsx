@@ -93,7 +93,7 @@ export default function HomePage() {
           </div>
         </div>
         {/* Boxes */}
-        <div className="flex flex-row flex-wrap w-[325px] mt-12 gap-[13px]">
+        <div className="flex flex-row flex-wrap w-[325px] mt-12 gap-[13px] mb-36">
           <Box>Lorem ipsum dolor sit amet consectetur.</Box>
           <Box variant="red">Lorem ipsum dolor sit amet.</Box>
           <Box variant="blue">Lorem ipsum dolor sit amet.</Box>
