@@ -93,7 +93,17 @@ export default function HomePage() {
             </Swiper>
           </div>
         </div>
-        <div className="shadow rounded-[10px]">
+        <div className="mt-10">
+          <div className="flex justify-between">
+            <h5 className="font-lato font-extrabold text-xs uppercase text-gray-150">
+              Your Interests
+            </h5>
+            <h5 className="font-lato font-extrabold text-xs uppercase text-gray-100 underline leading-4">
+              SEE ALL
+            </h5>
+          </div>
+        </div>
+        <div className="shadow rounded-[10px] mt-6">
           <Tabs />
         </div>
 
